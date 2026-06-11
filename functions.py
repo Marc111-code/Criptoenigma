@@ -1,10 +1,5 @@
-def ols_pos(x,n,malphabet):
-    if x - n <= 1:
-        a = x - n 
-        return malphabet
-    else:
-        return x - n
-print(old_pos(5,5,25))
+def old_pos(x,n,malphabet):
+    return (x-n) % malphabet
 def new_pos(x,n,malphabet):
 
     if x + n <= malphabet:
@@ -24,3 +19,13 @@ def encrypt_cesar(s,n,alphabet):
         i = i + 1
     return fin    
 print(encrypt_cesar("abc",2,['a','b','c']))
+
+def decrypt_cesar(s,n,alphabet):
+    fin = ""
+   
+    for lletra in s:
+        pos = old_pos(alphabet.index(lletra),n, len(alphabet) )
+        fin = fin + alphabet[pos]
+        
+    return fin
+print(decrypt_cesar("cab",2,['a','b','c',]))
