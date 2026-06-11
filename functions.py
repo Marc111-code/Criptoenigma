@@ -1,3 +1,10 @@
+def ols_pos(x,n,malphabet):
+    if x - n <= 1:
+        a = x - n 
+        return malphabet
+    else:
+        return x - n
+print(old_pos(5,5,25))
 def new_pos(x,n,malphabet):
 
     if x + n <= malphabet:
