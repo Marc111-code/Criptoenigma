@@ -37,3 +37,30 @@ def decrypt_cesar(s,n,alphabet):
         
     return fin
 print(decrypt_cesar("cab",2,['a','b','c',]))
+
+
+def new_alphabet(l,p):
+    a = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    res = []
+    if 0>= len(p) or len(a) <= len(p):
+        return p
+
+    for lletra in p:     
+        res = res + list(lletra)
+    pos = a.index(lletra)
+    i =pos
+    while i < len(a):
+        if a[i] not in p:
+            res = res+ list(a[i])
+        i=i+1
+    
+    i=0
+    while i < pos:
+        if a[i] not in p:
+            res = res+ list(a[i])
+        i=i+1   
+    
+    return res  
+    
+print(new_alphabet(12,"epsilon"))
+
