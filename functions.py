@@ -1,3 +1,11 @@
+def alphabet_list():
+    abc = []
+    a = 97
+    while a <= 122:
+        abc = abc + list(chr(a))
+        a = a + 1
+    return abc
+
 def old_pos(x,n,malphabet):
     return (x-n) % malphabet
 def new_pos(x,n,malphabet):
