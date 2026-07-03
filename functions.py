@@ -64,3 +64,23 @@ def new_alphabet(l,p):
     
 print(new_alphabet(12,"epsilon"))
 
+def encrypt_monoalfabetic(s,kw,alphabet):
+    x = new_alphabet(0,kw)
+    i =0
+    aux=""
+    while i < len(s):
+        a = alphabet.index(s[i])
+        i = i + 1
+        aux = aux + x[a]
+    return aux
+
+
+def decrypt_monoalfabetic(s,kw,alphabet):
+    x = new_alphabet(0,kw)
+    aux = ""
+    i = 0
+    for lletra in s:
+        a = x.index(s[i])
+        aux = aux + alphabet[a]
+        i = i +1
+    return aux
