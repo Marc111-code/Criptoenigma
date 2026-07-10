@@ -84,3 +84,21 @@ def decrypt_monoalfabetic(s,kw,alphabet):
         aux = aux + alphabet[a]
         i = i +1
     return aux
+
+l = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+def displaced_alphabet(alphabet,i):
+    pos = l[i]
+    res = []
+    x=i
+    
+    
+    while i< len(alphabet):
+        res = res + list(l[i])
+        i += 1
+    i=0
+    while i < x:
+        res.append(l[i])
+        i+=1
+   
+    return res    
+print(displaced_alphabet(l,3))
