@@ -112,3 +112,14 @@ def create_displaced_alphabet_list(l):
         i = i + 1
     print(res)
 create_displaced_alphabet_list(["a","b","c"])
+
+
+
+def create_dictionary(l1,l2):
+    res = {}
+    i = 0
+    while i < len(l1):
+        res[l1[i]] = l2[i]
+        i += 1
+    return res
+print(create_dictionary(["a","b","c"],["1","2","3"]))
