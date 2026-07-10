@@ -102,3 +102,13 @@ def displaced_alphabet(alphabet,i):
    
     return res    
 print(displaced_alphabet(l,3))
+
+
+def create_displaced_alphabet_list(l):
+    i = 0 
+    res = []
+    while i <= len(l) - 1:
+        res.append(displaced_alphabet(l,i))
+        i = i + 1
+    print(res)
+create_displaced_alphabet_list(["a","b","c"])
