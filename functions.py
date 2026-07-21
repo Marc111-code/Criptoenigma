@@ -113,8 +113,6 @@ def create_displaced_alphabet_list(l):
     print(res)
 create_displaced_alphabet_list(["a","b","c"])
 
-
-
 def create_dictionary(l1,l2):
     res = {}
     i = 0
@@ -123,3 +121,27 @@ def create_dictionary(l1,l2):
         i += 1
     return res
 print(create_dictionary(["a","b","c"],["1","2","3"]))
+
+
+def create_encrypt_alphabet_dictionary(l1,l2):
+    res = {}
+    i = 0
+    while i < len(l1):
+        a = create_dictionary(l1,l2[i])
+        res[l1[i]] = a 
+        i = i +1
+    return res
+print(create_encrypt_alphabet_dictionary(['a','b','c'],[['a','b','c'],['b','c','a'],['c','a','b']]))
+
+
+
+
+def create_decrypt_alphabets_dictionary(l1, l2):
+    if len(l1) != len(l2):
+        return {}
+    d = {}
+    i = 0
+    while i < len(l1):
+        d[l1[i]] = create_dictionary(l2[i], l1)
+        i = i + 1
+        return d
