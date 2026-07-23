@@ -111,6 +111,7 @@ def create_displaced_alphabet_list(l):
         res.append(displaced_alphabet(l,i))
         i = i + 1
     print(res)
+    return res
 create_displaced_alphabet_list(["a","b","c"])
 
 def create_dictionary(l1,l2):
@@ -145,3 +146,9 @@ def create_decrypt_alphabets_dictionary(l1, l2):
         d[l1[i]] = create_dictionary(l2[i], l1)
         i = i + 1
         return d
+
+def encrypt_polialphabetic(s,kw,alphabet):
+    print(create_encrypt_alphabet_dictionary(alphabet,create_displaced_alphabet_list(alphabet)))
+l = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+lt = ['a', 'b', 'c']
+encrypt_polialphabetic('a','b',lt)
